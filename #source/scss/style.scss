@@ -1,0 +1,271 @@
+//<Mixins>=====================================================================================
+@import "mixins.scss";
+//</Mixins>====================================================================================
+
+//<Fonts>======================================================================================
+
+//<Connect the fonts>==========================================================================
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap");
+//</Connect the fonts>=========================================================================
+
+//<Icon fonts>=================================================================================
+//</Icon fonts>================================================================================
+
+//</Default font>==============================================================================
+$fontfamily: "Anton", sans-serif;
+//</Default font>==============================================================================
+
+//</Fonts>=====================================================================================
+
+//<Variables>==================================================================================
+@import "variables.scss";
+//</Variables>=================================================================================
+
+//<Reset, General parameters>==================================================================
+@import "null.scss";
+body {
+	@include font-size(16, 1.6, normal);
+	@include antialiasing();
+	color: #000000;
+	&.lock {
+		overflow: hidden;
+	}
+}
+//</Reset, General parameters>=================================================================
+
+//<Wrapper>====================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	// &.loaded {
+	// }
+}
+//</Wrapper>===================================================================================
+
+//<Main grid>==================================================================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 738px;
+		// max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 15px;
+	}
+	@media (max-width: $md4+px) {
+		max-width: none;
+		padding: 0 15px;
+	}
+}
+//</Main grid>=================================================================================
+
+//<Connect UI files of styles, forms and ready-made classes>===================================
+//</Connect UI files of styles, forms and ready-made classes>==================================
+
+//<Connect style files of pages and elements>==================================================
+@import "header.scss";
+@import "footer.scss";
+//</Connect style files of pages and elements>=================================================
+
+//<Main block>=================================================================================
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	@include flexbox();
+	flex-direction: column;
+}
+
+// Main screen
+.main-screen {
+	flex: 1 0 100%;
+	background: linear-gradient(
+			116.84deg,
+			rgba(0, 0, 0, 0.37) 5.05%,
+			rgba(0, 0, 0, 0.15) 112.97%
+		),
+		url("../img/bg/bg-main.webp") center no-repeat;
+	@include background-size(cover);
+	&__overlay {
+		top: 50%;
+		width: 100%;
+		height: 100%;
+		@include flexbox();
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		color: #ffffff;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	&__caption {
+		@include font-size(40, 1.5, 0.1em);
+		margin-bottom: 3px;
+	}
+	&__title {
+		@include font-size(100, 1.5, 0.1em);
+		margin-bottom: 19px;
+	}
+	@media (max-width: $md1+px) {
+		&__caption {
+			font-size: 32px;
+		}
+		&__title {
+			font-size: 85px;
+		}
+	}
+	@media (max-width: $md2+px) {
+		&__caption {
+			font-size: 27px;
+		}
+		&__title {
+			font-size: 72px;
+		}
+	}
+	@media (max-width: $md3+px) {
+		&__caption {
+			font-size: 21px;
+		}
+		&__title {
+			font-size: 62px;
+		}
+	}
+}
+
+/* Button */
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 15px 49px;
+	border: 1px solid #ffffff;
+	cursor: pointer;
+	@include font-size(17, 1.5, 0.1em);
+	font-weight: 400;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+	@include anim(0.3s, 0s);
+	&:hover {
+		background-color: #ffffff;
+		color: #000000;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 16px;
+	}
+}
+
+// About
+.section {
+	overflow: hidden;
+	padding: 113px 0 85px 0;
+	&__title {
+		margin-bottom: 58px;
+		@include font-size(50, 1.5, normal);
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	&__grid {
+		@include flexbox();
+		flex-wrap: wrap;
+		margin: 0 -15px;
+	}
+	&__col {
+		@include flexbox();
+		flex-direction: column;
+		justify-content: space-between;
+		width: 50%;
+		padding: 0 15px;
+	}
+	&__content {
+		margin-bottom: 67px;
+	}
+	&__subheader {
+		margin-bottom: 19px;
+		@include font-size(25, 1.5, normal);
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	&__text {
+		font-family: $open-sans;
+		@include font-size(16, 1.5, normal);
+		font-weight: 400;
+		text-align: justify;
+	}
+	&__images {
+		@include flexbox();
+		flex-wrap: wrap;
+		margin: 0 -30px 0 0;
+	}
+	&__img {
+		&--small {
+			width: calc((100% - 60px) / 2);
+			margin: 0 30px 0 0;
+		}
+		&--big {
+			width: 100%;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	@media (max-width: $md2+px) {
+		& {
+			padding: 83px 0 55px 0;
+		}
+		&__title {
+			font-size: 45px;
+		}
+		&__img {
+			overflow: hidden;
+			img {
+				max-height: 206px;
+				object-fit: cover;
+			}
+		}
+	}
+	@media (max-width: $md3+px) {
+		& {
+			padding: 80px 0 52px 0;
+		}
+		&__col {
+			width: 100%;
+			margin-bottom: 60px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__content {
+			margin-bottom: 30px;
+		}
+		&__title {
+			margin-bottom: 30px;
+			font-size: 40px;
+		}
+		&__images {
+			margin: 0 -15px 0 0;
+		}
+		&__img {
+			overflow: hidden;
+			&--small {
+				width: calc((100% - 30px) / 2);
+				margin: 0 15px 0 0;
+			}
+			img {
+				max-height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+//</Main block>================================================================================

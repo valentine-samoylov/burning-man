@@ -1,0 +1,132 @@
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: quote($font-name);
+		src: local($font-name), url($path + ".eot?#iefix") format("embedded-opentype");
+		// src: local($font-name), url($path + ".woff2") format("woff2");
+		src: local($font-name), url($path + ".woff") format("woff");
+		src: local($font-name), url($path + ".ttf") format("truetype");
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+	font-size: $font-size * 1px;
+	// font-size: $font-size * 0.1rem;
+	// example using rem values and 62.5% font-size so 1rem = 10px
+
+	@if $line-height==normal {
+		line-height: normal;
+	} @else {
+		line-height: $line-height;
+	}
+
+	@if $letter-spacing==normal {
+		letter-spacing: normal;
+	} @else {
+		letter-spacing: $letter-spacing;
+	}
+}
+
+@mixin background-size($background-size) {
+	-webkit-background-size: $background-size;
+	-moz-background-size: $background-size;
+	-o-background-size: $background-size;
+	background-size: $background-size;
+}
+
+@mixin antialiasing($type: antialiased) {
+	/* antialiased, none, subpixel-antialiased*/
+	-webkit-font-smoothing: $type;
+	font-smoothing: $type;
+	font-smooth: always;
+}
+
+@mixin anim($time, $delay) {
+	-webkit-transition: all $time ease $delay;
+	-moz-transition: all $time ease $delay;
+	-ms-transition: all $time ease $delay;
+	-o-transition: all $time ease $delay;
+	transition: all $time ease $delay;
+}
+
+@mixin anim_cubic($time, $delay) {
+	-webkit-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+	-moz-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+	-ms-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+	-o-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+	transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+}
+
+@mixin animate($name, $time, $infinite, $type) {
+	-webkit-animation: $name $time + s $infinite $type;
+	-moz-animation: $name $time + s $infinite $type;
+	-o-animation: $name $time + s $infinite $type;
+	animation: $name $time + s $infinite $type;
+}
+
+@mixin rotate($deg) {
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-webkit-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
+}
+
+@mixin scale($num) {
+	-moz-transform: scale($num);
+	-ms-transform: scale($num);
+	-webkit-transform: scale($num);
+	-o-transform: scale($num);
+	transform: scale($num);
+}
+
+@mixin skew($num) {
+	-webkit-transform: skewX($num);
+	-moz-transform: skewX($num);
+	-ms-transform: skewX($num);
+	-o-transform: skewX($num);
+	transform: skewX($num);
+}
+
+@mixin cnt($h) {
+	display: flex;
+	flex-direction: column;
+	height: $h;
+	text-align: center;
+	align-items: stretch;
+	justify-content: center;
+}
+
+@mixin tr($x, $y, $z) {
+	transform: translate3d($x, $y, $z);
+	-webkit-transform: translate3d($x, $y, $z);
+	-ms-transform: translate3d($x, $y, $z);
+	-o-transform: translate3d($x, $y, $z);
+	-moz-transform: translate3d($x, $y, $z);
+}
+
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 0;
+}
+
+@mixin flexboxinline() {
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flex;
+	display: -o-inline-flex;
+	display: inline-flex;
+}
+
+@mixin flexorder($val) {
+	-webkit-box-ordinal-group: $val;
+	-moz-box-ordinal-group: $val;
+	-ms-flex-order: $val;
+	-webkit-order: $val;
+	order: $val;
+}
