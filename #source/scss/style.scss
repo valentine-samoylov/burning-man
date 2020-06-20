@@ -144,10 +144,12 @@ body {
 			position: relative;
 		}
 		&__caption {
-			font-size: 21px;
+			font-size: 20px;
+			margin-bottom: 0;
 		}
 		&__title {
-			font-size: 62px;
+			font-size: 52px;
+			margin-bottom: 0;
 		}
 	}
 }
@@ -174,10 +176,7 @@ body {
 	}
 	@media (max-width: $md2+px) and (orientation: landscape) {
 		& {
-			position: absolute;
-			right: 18%;
-			bottom: 39px;
-			padding: 9px 15px;
+			padding: 5px 11px;
 		}
 	}
 }
