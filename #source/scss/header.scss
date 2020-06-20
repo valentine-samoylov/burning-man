@@ -37,6 +37,11 @@
 			padding-top: 25px;
 		}
 	}
+	@media (max-width: $md2+px) and (orientation: landscape) {
+		&__logo img {
+			height: 26px;
+		}
+	}
 }
 
 .menu {
