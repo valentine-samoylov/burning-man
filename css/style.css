@@ -258,7 +258,7 @@ body.lock {
 		overflow: auto;
 		background: -o-linear-gradient(297deg, rgba(0, 0, 0, 0.98) 15%, rgba(0, 0, 0, 0.9) 72%);
 		background: linear-gradient(153deg, rgba(0, 0, 0, 0.98) 15%, rgba(0, 0, 0, 0.9) 72%);
-		padding: 150px 0px 20px 0px;
+		padding: 100px 0px 20px 0px;
 		transform: translate3d(0px, -100%, 0px);
 		-webkit-transform: translate3d(0px, -100%, 0px);
 		-ms-transform: translate3d(0px, -100%, 0px);
