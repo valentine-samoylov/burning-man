@@ -404,14 +404,6 @@ body.lock {
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 0 100%;
 	        flex: 1 0 100%;
-	background: -o-linear-gradient(333.16deg, rgba(0, 0, 0, 0.37) 5.05%, rgba(0, 0, 0, 0.15) 112.97%), url("../img/bg/bg-main.webp") center no-repeat;
-	background: linear-gradient(116.84deg, rgba(0, 0, 0, 0.37) 5.05%, rgba(0, 0, 0, 0.15) 112.97%), url("../img/bg/bg-main.webp") center no-repeat;
-	background-size: cover;
-}
-.main-screen__overlay {
-	top: 50%;
-	width: 100%;
-	height: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -426,6 +418,13 @@ body.lock {
 	-webkit-box-align: start;
 	    -ms-flex-align: start;
 	        align-items: flex-start;
+	background: -o-linear-gradient(333.16deg, rgba(0, 0, 0, 0.37) 5.05%, rgba(0, 0, 0, 0.15) 112.97%), url("../img/bg/bg-main.webp") center no-repeat;
+	background: linear-gradient(116.84deg, rgba(0, 0, 0, 0.37) 5.05%, rgba(0, 0, 0, 0.15) 112.97%), url("../img/bg/bg-main.webp") center no-repeat;
+	background-size: cover;
+}
+.main-screen__overlay {
+	width: 100%;
+	height: 100%;
 	color: #ffffff;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -467,6 +466,9 @@ body.lock {
 	}
 }
 @media (max-width: 991.98px) and (orientation: landscape) {
+	.main-screen__overlay {
+		position: relative;
+	}
 	.main-screen__caption {
 		font-size: 20px;
 	}
@@ -505,7 +507,10 @@ body.lock {
 }
 @media (max-width: 991.98px) and (orientation: landscape) {
 	.btn {
-		padding: 10px 15px;
+		position: absolute;
+		top: 50px;
+		right: 20%;
+		padding: 9px 15px;
 	}
 }
 

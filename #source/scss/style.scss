@@ -89,6 +89,10 @@ body {
 // Main screen
 .main-screen {
 	flex: 1 0 100%;
+	@include flexbox();
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 	background: linear-gradient(
 			116.84deg,
 			rgba(0, 0, 0, 0.37) 5.05%,
@@ -97,13 +101,8 @@ body {
 		url("../img/bg/bg-main.webp") center no-repeat;
 	@include background-size(cover);
 	&__overlay {
-		top: 50%;
 		width: 100%;
 		height: 100%;
-		@include flexbox();
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
 		color: #ffffff;
 		font-weight: 400;
 		text-transform: uppercase;
@@ -141,6 +140,9 @@ body {
 		}
 	}
 	@media (max-width: $md2+px) and (orientation: landscape) {
+		&__overlay {
+			position: relative;
+		}
 		&__caption {
 			font-size: 20px;
 		}
@@ -173,7 +175,10 @@ body {
 	}
 	@media (max-width: $md2+px) and (orientation: landscape) {
 		& {
-			padding: 10px 15px;
+			position: absolute;
+			top: 50px;
+			right: 20%;
+			padding: 9px 15px;
 		}
 	}
 }
