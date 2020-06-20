@@ -470,11 +470,10 @@ body.lock {
 		position: relative;
 	}
 	.main-screen__caption {
-		font-size: 20px;
+		font-size: 21px;
 	}
 	.main-screen__title {
-		margin-bottom: 11px;
-		font-size: 52px;
+		font-size: 62px;
 	}
 }
 
@@ -508,8 +507,8 @@ body.lock {
 @media (max-width: 991.98px) and (orientation: landscape) {
 	.btn {
 		position: absolute;
-		top: 50px;
-		right: 20%;
+		right: 18%;
+		bottom: 39px;
 		padding: 9px 15px;
 	}
 }
