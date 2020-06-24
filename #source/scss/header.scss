@@ -59,6 +59,7 @@
 		li {
 			margin-right: 40px;
 			&:last-child {
+				margin-right: 0;
 			}
 		}
 	}
@@ -90,7 +91,7 @@
 		}
 	}
 	@media (max-width: $md3+px) {
-		&__body {
+		&__list {
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
@@ -105,8 +106,7 @@
 				rgba(0, 0, 0, 0.98) 15%,
 				rgba(0, 0, 0, 0.9) 72%
 			);
-
-			padding: 100px 0px 20px 0px;
+			padding: 100px 0px 100px 0px;
 			@include tr(0px, -100%, 0px);
 			@include anim(0.3s, 0s);
 			&.active {
@@ -117,14 +117,8 @@
 				margin: 0;
 			}
 		}
-		&__list {
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
 		&__item {
 			font-size: 20px;
-			padding: 0 0 45px 0;
 			&:after {
 				display: none;
 			}

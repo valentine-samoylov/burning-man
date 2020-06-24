@@ -47,12 +47,12 @@ $(document).ready(function(){
 	//<Icon menu button (burger menu)>=============================================================
 	$(".icon-menu").click(function (event) {
 		$(this).toggleClass("active");
-		$(".menu__body").toggleClass("active");
+		$(".menu__list").toggleClass("active");
 		$("body").toggleClass("lock");
 	});
 
-	$(".menu__body a").click(function (event) {
-		$(".icon-menu, .menu__body, .menu__link").removeClass("active");
+	$("a").click(function (event) {
+		$(".icon-menu, .menu__list, .menu__link").removeClass("active");
 		$("body").removeClass("lock");
 	});
 	//</Icon menu button (burger menu)>============================================================
