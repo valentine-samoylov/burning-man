@@ -101,11 +101,7 @@
 			top: 0;
 			left: 0;
 			overflow: auto;
-			background: linear-gradient(
-				153deg,
-				rgba(0, 0, 0, 0.98) 15%,
-				rgba(0, 0, 0, 0.9) 72%
-			);
+			background: rgba(0, 0, 0, 0.98);
 			padding: 100px 0px 100px 0px;
 			@include tr(0px, -100%, 0px);
 			@include anim(0.3s, 0s);
@@ -119,6 +115,10 @@
 		}
 		&__item {
 			font-size: 20px;
+			&--tel {
+				position: absolute;
+				right: 60px;
+			}
 			&:after {
 				display: none;
 			}
