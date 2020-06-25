@@ -433,7 +433,7 @@ body.lock {
 	letter-spacing: 0.1em;
 	margin-bottom: 3px;
 }
-.main-screen__title {
+.main-screen__headline {
 	font-size: 100px;
 	line-height: 1.5;
 	letter-spacing: 0.1em;
@@ -443,7 +443,7 @@ body.lock {
 	.main-screen__caption {
 		font-size: 32px;
 	}
-	.main-screen__title {
+	.main-screen__headline {
 		font-size: 85px;
 	}
 }
@@ -451,7 +451,7 @@ body.lock {
 	.main-screen__caption {
 		font-size: 27px;
 	}
-	.main-screen__title {
+	.main-screen__headline {
 		font-size: 72px;
 	}
 }
@@ -459,7 +459,7 @@ body.lock {
 	.main-screen__caption {
 		font-size: 21px;
 	}
-	.main-screen__title {
+	.main-screen__headline {
 		font-size: 62px;
 	}
 }
@@ -471,7 +471,7 @@ body.lock {
 		font-size: 20px;
 		margin-bottom: 0;
 	}
-	.main-screen__title {
+	.main-screen__headline {
 		font-size: 52px;
 		margin-bottom: 0;
 	}
@@ -514,7 +514,7 @@ body.lock {
 	overflow: hidden;
 	padding: 113px 0 85px 0;
 }
-.about__title {
+.about__headline {
 	margin-bottom: 58px;
 	font-size: 50px;
 	line-height: 1.5;
@@ -536,7 +536,7 @@ body.lock {
 	margin: 0 30px 0 0;
 	margin-bottom: 67px;
 }
-.about__subheader {
+.about__subheadline {
 	margin-bottom: 19px;
 	font-size: 25px;
 	line-height: 1.5;
@@ -556,7 +556,7 @@ body.lock {
 	.about {
 		padding: 83px 0 55px 0;
 	}
-	.about__title {
+	.about__headline {
 		font-size: 45px;
 	}
 }
@@ -568,7 +568,7 @@ body.lock {
 		width: 100%;
 		margin-bottom: 60px;
 	}
-	.about__title {
+	.about__headline {
 		margin-bottom: 30px;
 		font-size: 40px;
 	}
