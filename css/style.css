@@ -154,9 +154,6 @@ body.lock {
 	padding: 22px 0;
 	border-bottom: none;
 }
-.header.fixed .icon-menu {
-	top: 26px;
-}
 .header.fixed .header__logo img {
 	height: 26px;
 }
@@ -303,10 +300,15 @@ body.lock {
 		display: block;
 		position: absolute;
 		z-index: 5;
-		top: 40px;
+		top: 50%;
 		right: 0;
 		width: 30px;
 		height: 18px;
+		transform: translate3d(0, -50%, 0);
+		-webkit-transform: translate3d(0, -50%, 0);
+		-ms-transform: translate3d(0, -50%, 0);
+		-o-transform: translate3d(0, -50%, 0);
+		-moz-transform: translate3d(0, -50%, 0);
 		cursor: pointer;
 	}
 	.icon-menu span {

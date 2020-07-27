@@ -14,9 +14,6 @@
 			padding: 22px 0;
 			border-bottom: none;
 		}
-		& .icon-menu {
-			top: 26px;
-		}
 		& .header__logo img {
 			height: 26px;
 		}
@@ -46,8 +43,6 @@
 
 .menu {
 	width: 100%;
-	&__icon {
-	}
 	&__body {
 		@include flexbox();
 		justify-content: space-between;
@@ -131,10 +126,11 @@
 		display: block;
 		position: absolute;
 		z-index: 5;
-		top: 40px;
+		top: 50%;
 		right: 0;
 		width: 30px;
 		height: 18px;
+		@include tr(0, -50%, 0);
 		cursor: pointer;
 		span {
 			@include anim(0.3s, 0s);
